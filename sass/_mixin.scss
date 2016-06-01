@@ -1,0 +1,103 @@
+/* =================== Devices ================== */
+@mixin mobile {
+  @media (min-width: #{$mobile-width}){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}){
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: #{$wide-width}) {
+    @content;
+  }
+}
+
+/* =================== Basic ================== */
+
+@mixin basicInside($position,$top,$left,$z-index){
+  position:$position;
+  top:$top;
+  left:$left;
+  z-index:$z-index;
+}
+
+@mixin basicOutside($width,$height,$margin,$padding){
+  width:$width;
+  height:$height;
+  margin:$margin;
+  padding:$padding;
+}
+
+@mixin colorChange {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease; 
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; 
+    transition: all 0.5s ease;  
+}
+
+@mixin animationSet{
+  -moz-transition:all .3s ease-in-out;
+  -webkit-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out; 
+}
+
+@mixin textRotation{
+  -ms-transform: rotate(-10deg); /* IE 9 */
+  -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+  transform: rotate(-10deg);  
+}
+
+@mixin removeTextRotation{
+  -ms-transform: rotate(0); /* IE 9 */
+  -webkit-transform: rotate(0); /* Chrome, Safari, Opera */
+  transform: rotate(0);  
+}
+
+@mixin centerAlign {
+  left:50%;
+  -ms-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+@mixin removeCenter{
+  left:0;
+  -ms-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);   
+}
+
+@mixin verticalAlign{
+  top:50%;
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin removeVertical{
+  top:0;
+  -ms-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0); 
+}
